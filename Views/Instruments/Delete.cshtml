@@ -1,0 +1,10 @@
+@model EmployeesManagement.Models.Instrument
+@{ ViewData["Title"]="Delete Instrument"; }
+<div class="card"><div class="card-header"><h3>Delete</h3></div><div class="card-body">
+<dl class="row">
+<dt class="col-sm-3">Tipo de Instrumento</dt><dd class="col-sm-9">@Model.TipoInstrumento</dd>
+<dt class="col-sm-3">Instrumento</dt><dd class="col-sm-9">@Model.Instrumento</dd>
+<dt class="col-sm-3">Usa Cordas?</dt><dd class="col-sm-9">@(Model.UsaCordas ? "Yes" : "No")</dd>
+</dl>
+<form asp-action="Delete"><input type="hidden" asp-for="Id"/><button class="btn btn-danger">Confirm Delete</button> <a asp-action="Index" class="btn btn-secondary">Cancel</a></form>
+</div></div>
